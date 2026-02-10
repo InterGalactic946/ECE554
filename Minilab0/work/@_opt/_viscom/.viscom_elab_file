@@ -1,0 +1,1 @@
+C:/intelFPGA_lite/24.1std/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 1966080 work.Minilab0_tb -quiet -auto_acc_if_foreign -work work -L C:/intelFPGA_lite/24.1std/questa_fse/intel/verilog/altera_mf -L C:/intelFPGA_lite/24.1std/questa_fse/intel/verilog/220model +acc -allow_unnamed -o _opt -id 1-4cd71792df86-698a15ba-11-1c24 +__betafsm

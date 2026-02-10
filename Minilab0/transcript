@@ -1,0 +1,88 @@
+# Compile of fifo.sv was successful.
+# Compile of mac.sv was successful.
+# Compile of Minilab0.v was successful.
+# Compile of Minilab0_tb.sv was successful.
+# Compile of Adder.v was successful.
+# Compile of FIFO_ip.v was successful.
+# Compile of Mult.v was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of fifo.sv failed with 2 errors.
+# Compile of mac.sv was successful.
+# Compile of Minilab0.v was successful.
+# Compile of Minilab0_tb.sv was successful.
+# Compile of Adder.v was successful.
+# Compile of FIFO_ip.v was successful.
+# Compile of Mult.v was successful.
+# 7 compiles, 1 failed with 2 errors.
+# Compile of fifo.sv was successful.
+vsim -gui work.Minilab0_tb
+# vsim -gui work.Minilab0_tb 
+# Start time: 10:30:48 on Feb 09,2026
+# Loading sv_std.std
+# Loading work.Minilab0_tb
+# Loading work.Minilab0
+# Loading work.MAC
+# Loading work.FIFO
+run -all
+# YAHOO!! All tests passed!
+# ** Note: $stop    : C:/Users/owner/ECE554/DE1_SoC/Tools/SystemBuilder/CodeGenerated/DE1_SOC/Minilab0/Minilab0_tb.sv(165)
+#    Time: 1190 ns  Iteration: 1  Instance: /Minilab0_tb
+# Break in Module Minilab0_tb at C:/Users/owner/ECE554/DE1_SoC/Tools/SystemBuilder/CodeGenerated/DE1_SOC/Minilab0/Minilab0_tb.sv line 165
+# Compile of fifo.sv was successful.
+# Compile of mac.sv was successful.
+# Compile of Minilab0.v was successful.
+# Compile of Minilab0_tb.sv was successful.
+# Compile of Adder.v was successful.
+# Compile of FIFO_ip.v was successful.
+# Compile of Mult.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Minilab0_tb -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/220model -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf
+# End time: 10:33:39 on Feb 09,2026, Elapsed time: 0:02:51
+# Errors: 0, Warnings: 5
+# vsim -gui work.Minilab0_tb -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/220model -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf 
+# Start time: 10:33:39 on Feb 09,2026
+# Loading sv_std.std
+# Loading work.Minilab0_tb
+# Loading work.Minilab0
+# Loading work.MAC
+# Loading work.Mult
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/220model.lpm_mult
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/220model.LPM_HINT_EVALUATION
+# Loading work.Adder
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/220model.lpm_add_sub
+# Loading work.FIFO
+# Loading work.FIFO_ip
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf.dcfifo
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf.dcfifo_mixed_widths
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf.ALTERA_DEVICE_FAMILIES
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf.dcfifo_low_latency
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf.ALTERA_MF_HINT_EVALUATION
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf.dcfifo_dffpipe
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf.dcfifo_async
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf.dcfifo_fefifo
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'DCFIFO_MW'.  Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /Minilab0_tb/iDUT/fifo_gen[0]/input_fifo/FIFO_inst/dcfifo_component/DCFIFO_MW File: $MODEL_TECH/../altera/verilog/src/altera_mf.v Line: 31791
+# ** Warning: (vsim-3722) $MODEL_TECH/../altera/verilog/src/altera_mf.v(31791): [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'DCFIFO_MW'.  Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /Minilab0_tb/iDUT/fifo_gen[1]/input_fifo/FIFO_inst/dcfifo_component/DCFIFO_MW File: $MODEL_TECH/../altera/verilog/src/altera_mf.v Line: 31791
+# ** Warning: (vsim-3722) $MODEL_TECH/../altera/verilog/src/altera_mf.v(31791): [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (24) does not match connection size (16) for port 'dataa'. The port definition is at: C:/Users/owner/ECE554/DE1_SoC/Tools/SystemBuilder/CodeGenerated/DE1_SOC/Minilab0/Adder.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /Minilab0_tb/iDUT/mac/add File: C:/Users/owner/ECE554/DE1_SoC/Tools/SystemBuilder/CodeGenerated/DE1_SOC/Minilab0/mac.sv Line: 31
+run -all
+# ** Error: ERROR First Digit Expecting: 7'b0000000, Actual: 7'b1111111
+#    Time: 1190 ns  Scope: Minilab0_tb File: C:/Users/owner/ECE554/DE1_SoC/Tools/SystemBuilder/CodeGenerated/DE1_SOC/Minilab0/Minilab0_tb.sv Line: 131
+# ** Error: ERROR Second Digit Expecting: 7'b0010010, Actual: 7'b1111111
+#    Time: 1190 ns  Scope: Minilab0_tb File: C:/Users/owner/ECE554/DE1_SoC/Tools/SystemBuilder/CodeGenerated/DE1_SOC/Minilab0/Minilab0_tb.sv Line: 136
+# ** Error: ERROR Third Digit Expecting: 7'b0000011, Actual: 7'b1111111
+#    Time: 1190 ns  Scope: Minilab0_tb File: C:/Users/owner/ECE554/DE1_SoC/Tools/SystemBuilder/CodeGenerated/DE1_SOC/Minilab0/Minilab0_tb.sv Line: 141
+# ** Error: ERROR Fourth Digit Expecting: 7'b1111001, Actual: 7'b1111111
+#    Time: 1190 ns  Scope: Minilab0_tb File: C:/Users/owner/ECE554/DE1_SoC/Tools/SystemBuilder/CodeGenerated/DE1_SOC/Minilab0/Minilab0_tb.sv Line: 146
+# ** Error: ERROR Fifth Digit Expecting: 7'b1000000, Actual: 7'b1111111
+#    Time: 1190 ns  Scope: Minilab0_tb File: C:/Users/owner/ECE554/DE1_SoC/Tools/SystemBuilder/CodeGenerated/DE1_SOC/Minilab0/Minilab0_tb.sv Line: 151
+# ** Error: ERROR Sixth Digit Expecting: 7'b1000000, Actual: 7'b1111111
+#    Time: 1190 ns  Scope: Minilab0_tb File: C:/Users/owner/ECE554/DE1_SoC/Tools/SystemBuilder/CodeGenerated/DE1_SOC/Minilab0/Minilab0_tb.sv Line: 156
+# ** Note: $stop    : C:/Users/owner/ECE554/DE1_SoC/Tools/SystemBuilder/CodeGenerated/DE1_SOC/Minilab0/Minilab0_tb.sv(165)
+#    Time: 1190 ns  Iteration: 1  Instance: /Minilab0_tb
+# Break in Module Minilab0_tb at C:/Users/owner/ECE554/DE1_SoC/Tools/SystemBuilder/CodeGenerated/DE1_SOC/Minilab0/Minilab0_tb.sv line 165
+# End time: 10:45:46 on Feb 09,2026, Elapsed time: 0:12:07
+# Errors: 6, Warnings: 6
