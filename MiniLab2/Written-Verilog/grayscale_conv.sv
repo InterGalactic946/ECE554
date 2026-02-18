@@ -1,3 +1,10 @@
+//------------------------------------------------------------------------------
+// grayscale_conv.sv
+// Converts Bayer-pattern pixel stream to grayscale via interpolation.
+// Uses a line buffer to access neighboring pixels and averages a 2x2 region.
+// Outputs valid grayscale pixels on even row/column positions.
+// Produces a grayscale pixel stream with corresponding data valid signal.
+//------------------------------------------------------------------------------
 module grayscale_conv (	
                 oGray,
 				oDVAL,
@@ -27,18 +34,22 @@ module grayscale_conv (
     reg		[11:0]	mDATAd_0;
     reg		[11:0]	mDATAd_1;
 
+	// Grayscale data outputs.
     reg		[13:0]	mGray;
     reg				mDVAL;
 
+	// Output the grayscale data.
     assign	oDVAL	=	mDVAL;
     assign  oGray   =   mGray[13:2];
 
+	// Instantiate a Line Buffer to store a row of previous pixels.
     Line_Buffer1 	u0	(	.clken(iDVAL),
                             .clock(iCLK),
                             .shiftin(iDATA),
                             .taps0x(mDATA_1),
                             .taps1x(mDATA_0)	);
 
+	// Convert input pixels to grayscale by interpolating the Bayer color pattern.
     always@(posedge iCLK or negedge iRST)
     begin
         if(!iRST)
@@ -53,10 +64,10 @@ module grayscale_conv (
             mDATAd_0	<=	mDATA_0;
             mDATAd_1	<=	mDATA_1;
 
-            // Data is valid on every even row and even column (prevents overlap of data)
+			// Data is valid on every even row and even column (prevents overlap of data).
             mDVAL		<=	{iY_Cont[0]|iX_Cont[0]}	?	1'b0	:	iDVAL;
 
-            // Average four neighboring pixels (in a sqaure shape) to get grayscale value
+			// Average four neighboring pixels (in a sqaure shape) to get grayscale value.
             mGray       <= mDATA_0 + mDATAd_0 + mDATA_1 + mDATAd_1;
         end
     end 
